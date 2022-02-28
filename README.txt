@@ -1,0 +1,22 @@
+# Project_Mobile_MMU
+Mobile App Project MMU
+
+
+
+
+
+
+
+
+
+
+
+Place links for reference:
+
+Online Grocery Store App | Android Studio Tutorial
+https://www.youtube.com/watch?v=SLTUBf5FaCA
+
+Fit all size screen:
+https://www.youtube.com/watch?v=5lSQcJjZPFs
+https://www.youtube.com/watch?v=n784uKM6ayg
+
