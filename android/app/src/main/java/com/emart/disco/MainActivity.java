@@ -11,7 +11,6 @@ public class MainActivity extends AppCompatActivity {
 
     Button button;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,9 +20,8 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, Order_history.class));
+                startActivity(new Intent(MainActivity.this, MapsActivity.class));
             }
         });
-
     }
 }

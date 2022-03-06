@@ -24,6 +24,10 @@ public class Cart {
         return this.price;
     }
 
+    public String getDescription() {
+        return this.description = "DISCO cart " + Double.toString(this.price);
+    }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -34,9 +38,5 @@ public class Cart {
 
     public void setPrice(double price) {
         this.price = price;
-    }
-
-    public String getDescription() {
-        return this.description = "DISCO cart " + Double.toString(this.price);
     }
 }

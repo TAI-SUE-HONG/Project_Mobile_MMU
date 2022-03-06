@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">DISCO</string>
+    <string name="order_details">Order details</string>
+    <string name="your_order_number">Your order number:</string>
+    <string name="delivery_address">Delivery address:</string>
+    <string name="total">Total:</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>
