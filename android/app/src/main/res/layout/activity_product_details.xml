@@ -2,10 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.MainFragment">
+    tools:context=".Product_details">
 
     <Button
         android:id="@+id/button"
@@ -25,18 +24,19 @@
         android:layout_height="57dp"
         android:layout_marginTop="29dp"
         android:layout_marginEnd="38dp"
-        android:text="Product Detials"
+        android:text="Product Details"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
         android:layout_marginBottom="61dp"
-        android:src="@drawable/tomato"
+        android:src="@android:drawable/ic_menu_report_image"
         app:layout_constraintBottom_toTopOf="@+id/price"
         app:layout_constraintEnd_toEndOf="@+id/button3"
         app:layout_constraintStart_toStartOf="@+id/textView2"
@@ -49,7 +49,6 @@
         android:layout_marginStart="45dp"
         android:layout_marginTop="18dp"
         android:layout_marginBottom="22dp"
-        android:autoText="false"
         android:text="Tomato (4 in 1 pack)"
         app:layout_constraintBottom_toBottomOf="@+id/price"
         app:layout_constraintStart_toStartOf="parent"
