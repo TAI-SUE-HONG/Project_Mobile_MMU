@@ -23,3 +23,6 @@ https://www.youtube.com/watch?v=n784uKM6ayg
 RecycleView
 https://www.youtube.com/watch?v=Mc0XT58A1Z4
 
+How to Change the Apps Starting (Default) Activity
+https://www.youtube.com/watch?v=6eES56mxfMs
+
