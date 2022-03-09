@@ -16,11 +16,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button = findViewById(R.id.button);
+        button = findViewById(R.id.signup_btn);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, MapsActivity.class));
+                startActivity(new Intent(MainActivity.this, Login_activity.class));
             }
         });
     }

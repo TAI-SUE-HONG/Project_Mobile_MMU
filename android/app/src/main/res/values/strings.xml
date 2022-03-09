@@ -5,4 +5,10 @@
     <string name="delivery_address">Delivery address:</string>
     <string name="total">Total:</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log in</string>
+    <string name="forgot_password">FORGOT PASSWORD</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="todo">TODO</string>
 </resources>
