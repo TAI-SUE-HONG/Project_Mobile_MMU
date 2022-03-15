@@ -12,6 +12,9 @@ Mobile App Project MMU
 
 
 Place links for reference:
+https://www.youtube.com/watch?v=HwYENW0RyY4
+
+https://www.youtube.com/watch?v=DOkPTN6X2AY
 
 Online Grocery Store App | Android Studio Tutorial
 https://www.youtube.com/watch?v=SLTUBf5FaCA
