@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg">
@@ -13,13 +14,25 @@
         android:gravity="center"
         android:layout_alignParentTop="true"
         android:layout_above="@id/input_group">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
-            android:text="@string/sign_up"
+            android:text="JOIN US NOW !"
             android:textColor="#FFFFFF"
-            android:textSize="20sp"/>
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="271dp"
+            android:layout_height="35dp"
+            android:text="@string/welcome_to_disco_grocery"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif"/>
+
     </LinearLayout>
     <LinearLayout
         android:id="@+id/input_group"
@@ -63,7 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/edit_text_middle"
-            android:hint="@string/password"
+            android:hint="@string/re_enter_password"
             android:inputType="textPassword"
             android:padding="15dp"/>
 

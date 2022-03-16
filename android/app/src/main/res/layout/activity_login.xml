@@ -19,9 +19,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
-            android:text="LOG IN"
-            android:textColor="#FFFFFF"
-            android:textSize="30sp" />
+            android:text="MEMBER LOGIN"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textSize="40sp" />
+
+        <TextView
+            android:layout_width="271dp"
+            android:layout_height="35dp"
+            android:text="Welcome to DISCO Grocery "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:textAlignment="center"/>
+
 
     </LinearLayout>
 
@@ -63,10 +74,11 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/button"
             android:foreground="?android:attr/selectableItemBackground"
-            android:text="@string/sign_in"
+            android:text="@string/log_in"
             android:textAllCaps="false"
             android:textColor="#fff"
-            android:textSize="17sp" />
+            android:textStyle="bold"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textViewRegister"
