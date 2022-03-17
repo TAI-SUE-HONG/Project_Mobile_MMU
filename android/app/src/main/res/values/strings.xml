@@ -19,4 +19,7 @@
     <string name="join_now">JOIN NOW</string>
     <string name="welcome_to_disco_grocery">Welcome to DISCO Grocery</string>
     <string name="joinnow">JOIN NOW !</string>
+    <string name="home">Home</string>
+    <string name="back">BACK</string>
+    <string name="place_order">Place Order</string>
 </resources>
