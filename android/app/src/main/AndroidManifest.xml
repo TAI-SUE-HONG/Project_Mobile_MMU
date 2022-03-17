@@ -18,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DISCO">
         <activity
+            android:name=".disco_cart"
+            android:exported="false" />
+        <activity
             android:name=".Homepage"
             android:exported="false" />
         <!--
