@@ -11,4 +11,12 @@
     <string name="forgot_password">FORGOT PASSWORD</string>
     <string name="sign_up">SIGN UP</string>
     <string name="todo">TODO</string>
+    <string name="username">Username</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t Have an Account? Sign Up</string>
+    <string name="already_have_an_account_sign_in">Already Have an Account? Sign in</string>
+    <string name="re_enter_password">Re-enter password</string>
+    <string name="join_now">JOIN NOW</string>
+    <string name="welcome_to_disco_grocery">Welcome to DISCO Grocery</string>
+    <string name="joinnow">JOIN NOW !</string>
 </resources>
