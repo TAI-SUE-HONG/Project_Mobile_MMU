@@ -11,11 +11,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class Order_history_Adapter extends RecyclerView.Adapter<Order_history_Adapter.Viewholder> {
+public class Payment_details_Adapter extends RecyclerView.Adapter<Payment_details_Adapter.Viewholder> {
     Context context;
     ArrayList<Cart_test> cartTestList;
 
-    public Order_history_Adapter(Context context, ArrayList<Cart_test> cartTestList) {
+    public Payment_details_Adapter(Context context, ArrayList<Cart_test> cartTestList) {
         this.context = context;
         this.cartTestList = cartTestList;
         notifyDataSetChanged();
@@ -23,14 +23,14 @@ public class Order_history_Adapter extends RecyclerView.Adapter<Order_history_Ad
 
     @NonNull
     @Override
-    public Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public Payment_details_Adapter.Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //inflate the layout
         View view = LayoutInflater.from(context).inflate(R.layout.activity_order_history2, parent, false);
-        return new Order_history_Adapter.Viewholder(view);
+        return new Payment_details_Adapter.Viewholder(view);
     }
 
     @Override
-    public void onBindViewHolder(Viewholder holder, int position) {
+    public void onBindViewHolder(Payment_details_Adapter.Viewholder holder, int position) {
         //assigning values to view created in the recycleview layout file
         //all based on the position of the recycleview
         holder.Date.setText(Integer.toString(cartTestList.get(position).getDate()));
@@ -43,7 +43,7 @@ public class Order_history_Adapter extends RecyclerView.Adapter<Order_history_Ad
     }
 
     public static class Viewholder extends RecyclerView.ViewHolder {
-        //grabbing layout from activity_order_history2
+        //grabbing layout from activity_payment_details2
 
         TextView Date;
         TextView Description;
@@ -51,8 +51,8 @@ public class Order_history_Adapter extends RecyclerView.Adapter<Order_history_Ad
         public Viewholder(@NonNull View itemView) {
             super(itemView);
 
-            Date = itemView.findViewById(R.id.order_date);
-            Description = itemView.findViewById(R.id.order_summary);
+            Date = itemView.findViewById(R.id.tv_payment_detail_title2);
+            Description = itemView.findViewById(R.id.tv_payment_detail_value2);
         }
     }
 }

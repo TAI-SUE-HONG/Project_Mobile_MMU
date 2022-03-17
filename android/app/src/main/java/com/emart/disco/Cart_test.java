@@ -1,12 +1,12 @@
 package com.emart.disco;
 
-public class Cart {
+public class Cart_test {
     private int id;
     private int date;
     private double price;
     private String description;
 
-    public Cart(int id, int date, double price) {
+    public Cart_test(int id, int date, double price) {
         this.id = id;
         this.date = date;
         this.price = price;
