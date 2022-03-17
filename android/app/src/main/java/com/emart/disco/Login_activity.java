@@ -52,18 +52,19 @@ public class Login_activity extends AppCompatActivity {
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = editTextEmail.getText().toString().trim();
-                String password = editTextPassword.getText().toString().trim();
-
-                User user = db.getUser(email, password);
-                if (user != null) {
-                    Intent i = new Intent(Login_activity.this, Homepage.class);
-                    i.putExtra("User", user);
-                    startActivity(i);
-                    finish();
-                }else{
-                    Toast.makeText(Login_activity.this, "Unregistered user, or incorrect", Toast.LENGTH_SHORT).show();
-                }
+//                String email = editTextEmail.getText().toString().trim();
+//                String password = editTextPassword.getText().toString().trim();
+//
+//                User user = db.getUser(email, password);
+//                if (user != null) {
+//                    Intent i = new Intent(Login_activity.this, Homepage.class);
+//                    i.putExtra("User", user);
+//                    startActivity(i);
+//                    finish();
+//                }else{
+//                    Toast.makeText(Login_activity.this, "Unregistered user, or incorrect", Toast.LENGTH_SHORT).show();
+//                }
+                startActivity(new Intent(Login_activity.this, Product_catalog.class));
             }
         });
     }

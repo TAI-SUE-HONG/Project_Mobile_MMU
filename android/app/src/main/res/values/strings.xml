@@ -22,4 +22,7 @@
     <string name="home">Home</string>
     <string name="back">BACK</string>
     <string name="place_order">Place Order</string>
+    <string name="my_cart">My Cart</string>
+    <string name="logout">Logout</string>
+    <string name="order_history">Order History</string>
 </resources>

@@ -43,4 +43,15 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.05" />
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bot_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

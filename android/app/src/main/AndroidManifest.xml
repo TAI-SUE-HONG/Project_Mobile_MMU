@@ -39,7 +39,7 @@
             android:name=".Signup_activity"
             android:exported="false" />
         <activity
-            android:name=".Product_details"
+            android:name=".Product_catalog"
             android:exported="false" />
         <activity
             android:name=".MapsActivity"

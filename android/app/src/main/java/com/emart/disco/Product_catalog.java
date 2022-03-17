@@ -9,18 +9,15 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Homepage extends AppCompatActivity {
+public class Product_catalog extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_homepage);
+        setContentView(R.layout.activity_product_catalog);
 
         //Initialise and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bot_navigation);
-
-        //Set Home Select
-        bottomNavigationView.setSelectedItemId(R.id.nav_home);
 
         //Perform ItemSelectedListener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -46,6 +43,5 @@ public class Homepage extends AppCompatActivity {
                 return false;
             }
         });
-
     }
 }
