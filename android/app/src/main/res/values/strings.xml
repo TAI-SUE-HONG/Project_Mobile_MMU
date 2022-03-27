@@ -25,4 +25,11 @@
     <string name="my_cart">My Cart</string>
     <string name="logout">Logout</string>
     <string name="order_history">Order History</string>
+
+    <string-array name="prod_name">
+        <item>Lady Finger</item>
+        <item>Tomato</item>
+        <item>Bell Pepper</item>
+        <item>Chicken Wings</item>
+    </string-array>
 </resources>
