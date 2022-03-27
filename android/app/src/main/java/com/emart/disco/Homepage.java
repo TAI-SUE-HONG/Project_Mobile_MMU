@@ -2,19 +2,33 @@ package com.emart.disco;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Homepage extends AppCompatActivity {
+public class Homepage extends AppCompatActivity implements View.OnClickListener{
+    public CardView card1, card2, card3, card4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
+
+        card1 = (CardView) findViewById(R.id.vege_act);
+        card2 = (CardView) findViewById(R.id.meat_act);
+        card3 = (CardView) findViewById(R.id.fruit_act);
+        card4 = (CardView) findViewById(R.id.dairy_act);
+
+        card1.setOnClickListener(this);
+        card2.setOnClickListener(this);
+        card3.setOnClickListener(this);
+        card4.setOnClickListener(this);
+
 
         //Initialise and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bot_navigation);
@@ -46,6 +60,36 @@ public class Homepage extends AppCompatActivity {
                 return false;
             }
         });
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent i;
+
+        switch (v.getId()){
+            case R.id.vege_act:
+                i = new Intent(this,Product_catalog.class);
+                startActivity(i);
+                break;
+
+            case R.id.meat_act:
+                i = new Intent(this,Product_catalog.class);
+                startActivity(i);
+                break;
+
+            case R.id.fruit_act:
+                i = new Intent(this,Product_catalog.class);
+                startActivity(i);
+                break;
+
+            case R.id.dairy_act:
+                i = new Intent(this,Product_catalog.class);
+                startActivity(i);
+                break;
+
+
+        }
 
     }
 }
