@@ -26,10 +26,7 @@ public class Payment_details extends AppCompatActivity {
         payment_recycleview = findViewById(R.id.payment_recycleview);
 
         ArrayList<Cart_test> cartTestArrayList = new ArrayList<>();
-        cartTestArrayList.add(new Cart_test(1, 05032022, 13.50));
-        cartTestArrayList.add(new Cart_test(2, 06032022, 15.50));
-        cartTestArrayList.add(new Cart_test(3, 07032022, 16.50));
-        cartTestArrayList.add(new Cart_test(4, 01032022, 17.50));
+
 
         Payment_details_Adapter adapter = new Payment_details_Adapter(this, cartTestArrayList);
         payment_recycleview.setAdapter(adapter);

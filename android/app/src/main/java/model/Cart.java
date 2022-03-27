@@ -15,15 +15,14 @@ public class Cart implements Serializable{
     private double price;
     private double total_price;
     private String date;
-    private String link;
 
-    public Cart(String Name, int Quantity, double price, double total_price, String date, String link) {
+
+    public Cart(String Name, int Quantity, double price, double total_price, String date) {
         this.Name = Name;
         this.Quantity = Quantity;
         this.price = price;
         this.total_price = total_price;
         this.date = date;
-        this.link=link;
     }
 
     @NonNull
