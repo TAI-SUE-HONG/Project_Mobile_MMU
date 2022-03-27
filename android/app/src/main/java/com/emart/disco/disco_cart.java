@@ -2,6 +2,7 @@ package com.emart.disco;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +11,10 @@ import android.widget.Toolbar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class disco_cart extends AppCompatActivity {
+public class disco_cart<disco_cartAdapter> extends AppCompatActivity {
+
+
+
 
     @Override
 
@@ -19,6 +23,7 @@ public class disco_cart extends AppCompatActivity {
         setContentView(R.layout.activity_disco_cart);
 
         Toolbar toolbar = findViewById(R.id.toolbar2);
+        toolbar.setTitle("Place Order");
 
 
         //Initialise and assign variable
