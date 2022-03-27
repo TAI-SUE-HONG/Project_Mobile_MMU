@@ -11,7 +11,7 @@ import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Homepage extends AppCompatActivity implements View.OnClickListener{
+public class Homepage extends AppCompatActivity {
     public CardView card1, card2, card3, card4;
 
     @Override
@@ -24,11 +24,31 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener{
         card3 = (CardView) findViewById(R.id.fruit_act);
         card4 = (CardView) findViewById(R.id.dairy_act);
 
-        card1.setOnClickListener(this);
-        card2.setOnClickListener(this);
-        card3.setOnClickListener(this);
-        card4.setOnClickListener(this);
 
+        card1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Homepage.this,Order_history.class));
+            }
+        });
+        card2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Homepage.this,Order_history.class));
+            }
+        });
+        card3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Homepage.this,Order_history.class));
+            }
+        });
+        card4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Homepage.this,Order_history.class));
+            }
+        });
 
         //Initialise and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bot_navigation);
@@ -63,33 +83,6 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener{
 
     }
 
-    @Override
-    public void onClick(View v) {
-        Intent i;
 
-        switch (v.getId()){
-            case R.id.vege_act:
-                i = new Intent(this,Product_catalog.class);
-                startActivity(i);
-                break;
-
-            case R.id.meat_act:
-                i = new Intent(this,Product_catalog.class);
-                startActivity(i);
-                break;
-
-            case R.id.fruit_act:
-                i = new Intent(this,Product_catalog.class);
-                startActivity(i);
-                break;
-
-            case R.id.dairy_act:
-                i = new Intent(this,Product_catalog.class);
-                startActivity(i);
-                break;
-
-
-        }
 
     }
-}

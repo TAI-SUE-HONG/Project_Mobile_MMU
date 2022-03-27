@@ -18,7 +18,8 @@ public class disco_cart extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_disco_cart);
 
-        Toolbar toolbar = findViewById(R.id.toolbar2)
+        Toolbar toolbar = findViewById(R.id.toolbar2);
+
 
         //Initialise and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bot_navigation);
