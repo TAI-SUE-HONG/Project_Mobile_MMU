@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/18020/OneDrive/Desktop/mobile app/android/app/src/main/res/layout/activity_disco_cart.xml" value="0.536" />
+        <entry key="..\:/Users/18020/OneDrive/Desktop/mobile app/android/app/src/main/res/layout/activity_homepage.xml" value="0.264" />
+        <entry key="..\:/Users/18020/OneDrive/Desktop/mobile app/android/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/18020/OneDrive/Desktop/mobile app/android/app/src/main/res/layout/activity_map.xml" value="0.25" />
+        <entry key="..\:/Users/18020/OneDrive/Desktop/mobile app/android/app/src/main/res/layout/activity_order_details.xml" value="0.25" />
+        <entry key="..\:/Users/18020/OneDrive/Desktop/mobile app/android/app/src/main/res/layout/activity_order_details2.xml" value="0.25" />
+        <entry key="..\:/Users/18020/OneDrive/Desktop/mobile app/android/app/src/main/res/layout/activity_order_history.xml" value="0.25" />
+        <entry key="..\:/Users/18020/OneDrive/Desktop/mobile app/android/app/src/main/res/layout/activity_order_history2.xml" value="0.25" />
+        <entry key="..\:/Users/18020/OneDrive/Desktop/mobile app/android/app/src/main/res/layout/activity_payment_details.xml" value="0.25" />
+        <entry key="..\:/Users/18020/OneDrive/Desktop/mobile app/android/app/src/main/res/layout/activity_payment_details2.xml" value="0.25" />
+        <entry key="..\:/Users/18020/OneDrive/Desktop/mobile app/android/app/src/main/res/layout/activity_product_catalog.xml" value="0.2" />
+        <entry key="..\:/Users/18020/OneDrive/Desktop/mobile app/android/app/src/main/res/layout/activity_signup.xml" value="0.25" />
         <entry key="..\:/Users/AmyWong/OneDrive/Documents/GitHub/Project_Mobile_MMU/android/app/src/main/res/layout/activity_disco_cart.xml" value="0.2667572463768116" />
         <entry key="..\:/Users/AmyWong/OneDrive/Documents/GitHub/Project_Mobile_MMU/android/app/src/main/res/layout/activity_homepage.xml" value="0.2653985507246377" />
         <entry key="..\:/Users/AmyWong/OneDrive/Documents/GitHub/Project_Mobile_MMU/android/app/src/main/res/layout/activity_login.xml" value="0.325" />
@@ -45,7 +57,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

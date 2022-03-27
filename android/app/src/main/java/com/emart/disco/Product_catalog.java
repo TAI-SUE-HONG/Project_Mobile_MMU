@@ -3,6 +3,7 @@ package com.emart.disco;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -42,6 +43,9 @@ public class Product_catalog extends AppCompatActivity {
                 }
                 return false;
             }
+
         });
+
+
+        }
     }
-}
