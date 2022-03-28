@@ -4,10 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import com.emart.disco.Cart_test;
-
 import java.io.Serializable;
-import java.util.ArrayList;
 
 @Entity
 public class Payment implements Serializable {

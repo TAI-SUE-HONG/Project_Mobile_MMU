@@ -24,7 +24,11 @@ public class Cart implements Serializable{
         this.date = date;
     }
 
+    public Cart(String name, double price) {
+    }
+
     @NonNull
+
     public String getName() {
         return Name;
     }
