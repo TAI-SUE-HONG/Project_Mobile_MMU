@@ -44,6 +44,7 @@ public class Order_history extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_home:
+                        startActivity(new Intent(getApplicationContext(), Homepage.class));
                         return true;
                     case R.id.nav_my_cart:
                         startActivity(new Intent(getApplicationContext(), disco_cart.class));

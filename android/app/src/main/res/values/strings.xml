@@ -25,6 +25,7 @@
     <string name="my_cart">My Cart</string>
     <string name="logout">Logout</string>
     <string name="order_history">Order History</string>
+    <string name="set_location">Set Location</string>
 
     <string-array name="prod_name">
         <item>Lady Finger</item>

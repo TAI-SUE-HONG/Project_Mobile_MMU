@@ -28,25 +28,25 @@ public class Homepage extends AppCompatActivity {
         card1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Homepage.this,Order_history.class));
+                startActivity(new Intent(Homepage.this,Product_catalog.class));
             }
         });
         card2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Homepage.this,Order_history.class));
+                startActivity(new Intent(Homepage.this,Product_catalog.class));
             }
         });
         card3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Homepage.this,Order_history.class));
+                startActivity(new Intent(Homepage.this,Product_catalog.class));
             }
         });
         card4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Homepage.this,Order_history.class));
+                startActivity(new Intent(Homepage.this,Product_catalog.class));
             }
         });
 
@@ -62,6 +62,8 @@ public class Homepage extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_home:
+                        startActivity(new Intent(getApplicationContext(), Homepage.class));
+                        overridePendingTransition(0,0);
                         return true;
                     case R.id.nav_my_cart:
                         startActivity(new Intent(getApplicationContext(), disco_cart.class));

@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey;
 import java.io.Serializable;
 
 @Entity
-public class User implements Serializable {
+public class User implements Serializable{
     @PrimaryKey(autoGenerate = true)
     @NonNull
     private int id;

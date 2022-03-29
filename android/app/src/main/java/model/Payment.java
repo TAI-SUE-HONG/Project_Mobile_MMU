@@ -2,26 +2,47 @@ package model;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
-import androidx.room.PrimaryKey;
+import androidx.room.Ignore;
 
 import java.io.Serializable;
+import java.util.Calendar;
+import java.util.Date;
 
-@Entity
+@Entity(primaryKeys = {"ID"})
 public class Payment implements Serializable {
-    @PrimaryKey(autoGenerate = true)
     @NonNull
-    private String Location;
-    private double Gross_payment;
-    private static final int delivery = 3;
-    private double Final_price;
+    public String Title;
+    public String Value;
 
-    public Payment(String Location, double Gross_payment) {
+    @Ignore
+    public String Name;
+    public String Location;
+    public double Gross_payment;
+    public static final int delivery = 3;
+    public double Final_price;
+    public Date DDTT;
+
+    public Payment(String Name, String Location, double Gross_payment) {
+        this.Name = Name;
         this.Location = Location;
         this.Gross_payment = Gross_payment;
         this.Final_price = Gross_payment + delivery;
+        this.DDTT = Calendar.getInstance().getTime();
     }
 
     @NonNull
+    public String getTitle() {
+        return Title;
+    }
+
+    public String getValue() {
+        return Value;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
     public String getLocation() {
         return Location;
     }
@@ -34,7 +55,19 @@ public class Payment implements Serializable {
         return Final_price;
     }
 
-    public void setLocation(@NonNull String location) {
+    public Date getDDTT() {
+        return DDTT;
+    }
+
+    public void setTitle(@NonNull String title) {
+        Title = title;
+    }
+
+    public void setValue(String value) {
+        Value = value;
+    }
+
+    public void setLocation(String location) {
         Location = location;
     }
 

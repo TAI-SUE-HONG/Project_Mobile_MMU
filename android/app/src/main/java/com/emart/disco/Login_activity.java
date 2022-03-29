@@ -41,7 +41,6 @@ public class Login_activity extends AppCompatActivity {
 
         db = dataBase.getUserDao();
 
-
         textViewRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -3,6 +3,7 @@ package com.emart.disco;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
@@ -21,11 +22,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import model.Cart;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     SearchView map_searchView;
     Button confirm_location;
+    Cart cart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,14 +82,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
 
         mapFragment.getMapAsync(this);
-/*
+
         confirm_location = findViewById(R.id.button_confirm_location);
         confirm_location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                String location = (String) map_searchView.getQuery();
+                cart.setLocation(location);
+                startActivity(new Intent(MapsActivity.this, disco_cart.class));
             }
-        });*/
+        });
     }
 
     /**

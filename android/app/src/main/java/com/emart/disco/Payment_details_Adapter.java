@@ -10,14 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import model.Cart;
+import model.Payment;
 
 public class Payment_details_Adapter extends RecyclerView.Adapter<Payment_details_Adapter.Viewholder> {
     Context context;
-    ArrayList<Cart_test> cartTestList;
+    List<Payment> PaymentList;
 
-    public Payment_details_Adapter(Context context, ArrayList<Cart_test> cartTestList) {
+    public Payment_details_Adapter(Context context) {
         this.context = context;
-        this.cartTestList = cartTestList;
+        notifyDataSetChanged();
+    }
+
+    public void setPaymentDetail(List<Payment> PaymentList) {
+        this.PaymentList = PaymentList;
         notifyDataSetChanged();
     }
 
@@ -33,26 +41,26 @@ public class Payment_details_Adapter extends RecyclerView.Adapter<Payment_detail
     public void onBindViewHolder(Payment_details_Adapter.Viewholder holder, int position) {
         //assigning values to view created in the recycleview layout file
         //all based on the position of the recycleview
-        holder.Date.setText(Integer.toString(cartTestList.get(position).getDate()));
-        holder.Description.setText(cartTestList.get(position).getDescription());
+        holder.title.setText(PaymentList.get(position).getTitle());
+        holder.value.setText(PaymentList.get(position).getValue());
     }
 
     @Override //the number of items in cart
     public int getItemCount() {
-        return cartTestList == null ? 0 : cartTestList.size();
+        return PaymentList == null ? 0 : PaymentList.size();
     }
 
     public static class Viewholder extends RecyclerView.ViewHolder {
         //grabbing layout from activity_payment_details2
 
-        TextView Date;
-        TextView Description;
+        TextView title;
+        TextView value;
 
         public Viewholder(@NonNull View itemView) {
             super(itemView);
 
-            Date = itemView.findViewById(R.id.tv_payment_detail_title2);
-            Description = itemView.findViewById(R.id.tv_payment_detail_value2);
+            title = itemView.findViewById(R.id.tv_payment_detail_title2);
+            value = itemView.findViewById(R.id.tv_payment_detail_value2);
         }
     }
 }

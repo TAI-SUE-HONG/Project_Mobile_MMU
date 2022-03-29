@@ -10,16 +10,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import model.Cart;
 
 public class disco_cart_adapter extends RecyclerView.Adapter<disco_cart_adapter.Viewholder> {
     Context context;
-    ArrayList<Cart_test> CartList;
+    List<Cart> CartList;
 
-    public disco_cart_adapter(Context context, ArrayList<Cart_test> CartList) {
+    public disco_cart_adapter(Context context) {
         this.context = context;
+        notifyDataSetChanged();
+    }
+
+    public void setProductName(List<Cart> CartList) {
         this.CartList = CartList;
         notifyDataSetChanged();
     }
@@ -36,6 +40,9 @@ public class disco_cart_adapter extends RecyclerView.Adapter<disco_cart_adapter.
     public void onBindViewHolder(Viewholder holder, int position) {
         //assigning values to view created in the recycleview layout file
         //all based on the position of the recycleview
+
+        holder.Product.setText(CartList.get(position).getName());
+        holder.Price.setText("RM " + CartList.get(position).getPrice());
         holder.Value.setText(Integer.toString(CartList.get(position).getQuantity()));
     }
 
@@ -44,11 +51,11 @@ public class disco_cart_adapter extends RecyclerView.Adapter<disco_cart_adapter.
         return CartList == null ? 0 : CartList.size();
     }
 
-    public static class Viewholder extends RecyclerView.ViewHolder {
+    public class Viewholder extends RecyclerView.ViewHolder {
         //grabbing layout from order_history_adapter
 
         Button Add, Minus;
-        TextView Value;
+        TextView Value, Product, Price;
 
         public Viewholder(@NonNull View itemView) {
             super(itemView);
@@ -56,11 +63,14 @@ public class disco_cart_adapter extends RecyclerView.Adapter<disco_cart_adapter.
             Add = itemView.findViewById(R.id.add);
             Minus = itemView.findViewById(R.id.minus);
             Value = itemView.findViewById(R.id.itemCount);
+            Product = itemView.findViewById(R.id.txt_product_name);
+            Price = itemView.findViewById(R.id.txt_price);
             Add.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View view) {
                     int newValue = 1 + Integer.parseInt(Value.getText().toString());
                     Value.setText(Integer.toString(newValue));
+
                 }
              });
 
@@ -71,7 +81,5 @@ public class disco_cart_adapter extends RecyclerView.Adapter<disco_cart_adapter.
                     Value.setText(Integer.toString(newValue));
                 }
             });
-
-
     }
 }}

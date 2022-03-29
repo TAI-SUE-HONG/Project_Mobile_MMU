@@ -58,10 +58,8 @@ public class Signup_activity extends AppCompatActivity {
                     userDao.insert(user);
                     Intent moveToLogin = new Intent(Signup_activity.this, Login_activity.class);
                     startActivity(moveToLogin);
-
                 } else {
-                    Toast.makeText(Signup_activity.this, "Password is not matching", Toast.LENGTH_SHORT).show();
-
+                    Toast.makeText(Signup_activity.this, "Password is not matching!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
