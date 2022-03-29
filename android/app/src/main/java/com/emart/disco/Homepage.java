@@ -2,19 +2,53 @@ package com.emart.disco;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Homepage extends AppCompatActivity {
+    public CardView card1, card2, card3, card4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
+
+        card1 = (CardView) findViewById(R.id.vege_act);
+        card2 = (CardView) findViewById(R.id.meat_act);
+        card3 = (CardView) findViewById(R.id.fruit_act);
+        card4 = (CardView) findViewById(R.id.dairy_act);
+
+
+        card1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Homepage.this,Order_history.class));
+            }
+        });
+        card2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Homepage.this,Order_history.class));
+            }
+        });
+        card3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Homepage.this,Order_history.class));
+            }
+        });
+        card4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Homepage.this,Order_history.class));
+            }
+        });
 
         //Initialise and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bot_navigation);
@@ -48,4 +82,7 @@ public class Homepage extends AppCompatActivity {
         });
 
     }
-}
+
+
+
+    }

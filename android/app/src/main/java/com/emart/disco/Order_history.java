@@ -26,15 +26,11 @@ public class Order_history extends AppCompatActivity {
         order_recycleview = findViewById(R.id.order_recycleview);
 
         ArrayList<Cart_test> cartTestArrayList = new ArrayList<>();
-        cartTestArrayList.add(new Cart_test(1, 05032022, 13.50));
-        cartTestArrayList.add(new Cart_test(2, 06032022, 15.50));
-        cartTestArrayList.add(new Cart_test(3, 07032022, 16.50));
-        cartTestArrayList.add(new Cart_test(4, 01032022, 17.50));
 
         Order_history_Adapter adapter = new Order_history_Adapter(this, cartTestArrayList);
-        order_recycleview.setAdapter(adapter);
+        //order_recycleview.setAdapter(adapter);
         order_recycleview.setLayoutManager(new LinearLayoutManager(this));
-        adapter.notifyDataSetChanged();
+        //adapter.notifyDataSetChanged();
 
         //Initialise and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bot_navigation);

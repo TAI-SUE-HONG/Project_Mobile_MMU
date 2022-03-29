@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/Users/18020/OneDrive/Desktop/mobile app/android/app/src/main/res/layout/activity_disco_cart.xml" value="0.536" />
         <entry key="..\:/Users/18020/OneDrive/Desktop/mobile app/android/app/src/main/res/layout/activity_homepage.xml" value="0.264" />
         <entry key="..\:/Users/18020/OneDrive/Desktop/mobile app/android/app/src/main/res/layout/activity_login.xml" value="0.25" />
@@ -17,8 +18,19 @@
         <entry key="..\:/Users/18020/OneDrive/Desktop/mobile app/android/app/src/main/res/layout/activity_signup.xml" value="0.25" />
         <entry key="..\:/Users/AmyWong/OneDrive/Documents/GitHub/Project_Mobile_MMU/android/app/src/main/res/layout/activity_disco_cart.xml" value="0.2667572463768116" />
         <entry key="..\:/Users/AmyWong/OneDrive/Documents/GitHub/Project_Mobile_MMU/android/app/src/main/res/layout/activity_homepage.xml" value="0.2653985507246377" />
+=======
+        <entry key="..\:/Users/AmyWong/OneDrive/Documents/GitHub/Project_Mobile_MMU/android/app/src/main/res/layout/activity_disco_cart.xml" value="0.22" />
+        <entry key="..\:/Users/AmyWong/OneDrive/Documents/GitHub/Project_Mobile_MMU/android/app/src/main/res/layout/activity_homepage.xml" value="0.22" />
+>>>>>>> cf882a5c4cad4af8b6a344ca6758cea6211579b6
         <entry key="..\:/Users/AmyWong/OneDrive/Documents/GitHub/Project_Mobile_MMU/android/app/src/main/res/layout/activity_login.xml" value="0.325" />
+        <entry key="..\:/Users/AmyWong/OneDrive/Documents/GitHub/Project_Mobile_MMU/android/app/src/main/res/layout/activity_order_details.xml" value="0.24003623188405798" />
+        <entry key="..\:/Users/AmyWong/OneDrive/Documents/GitHub/Project_Mobile_MMU/android/app/src/main/res/layout/activity_order_details2.xml" value="0.190625" />
+        <entry key="..\:/Users/AmyWong/OneDrive/Documents/GitHub/Project_Mobile_MMU/android/app/src/main/res/layout/activity_order_history.xml" value="0.17760416666666667" />
         <entry key="..\:/Users/AmyWong/OneDrive/Documents/GitHub/Project_Mobile_MMU/android/app/src/main/res/layout/activity_order_history2.xml" value="0.1743659420289855" />
+        <entry key="..\:/Users/AmyWong/OneDrive/Documents/GitHub/Project_Mobile_MMU/android/app/src/main/res/layout/activity_payment_details.xml" value="0.228125" />
+        <entry key="..\:/Users/AmyWong/OneDrive/Documents/GitHub/Project_Mobile_MMU/android/app/src/main/res/layout/activity_payment_details2.xml" value="0.25226449275362317" />
+        <entry key="..\:/Users/AmyWong/OneDrive/Documents/GitHub/Project_Mobile_MMU/android/app/src/main/res/layout/activity_product_catalog.xml" value="0.325" />
+        <entry key="..\:/Users/AmyWong/OneDrive/Documents/GitHub/Project_Mobile_MMU/android/app/src/main/res/layout/cart_item_layout.xml" value="0.5" />
         <entry key="..\:/Users/tsywo/OneDrive/Documents/GitHub/Project_Mobile_MMU/android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
         <entry key="..\:/Users/tsywo/OneDrive/Documents/GitHub/Project_Mobile_MMU/android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
         <entry key="..\:/Users/tsywo/OneDrive/Documents/GitHub/Project_Mobile_MMU/android/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />

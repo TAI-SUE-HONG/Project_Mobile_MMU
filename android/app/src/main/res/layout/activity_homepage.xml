@@ -70,6 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/vege_act"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
@@ -101,6 +102,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/meat_act"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
@@ -146,6 +148,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/fruit_act"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
@@ -177,6 +180,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/dairy_act"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
@@ -207,6 +211,7 @@
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
+
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -215,10 +220,9 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_navigation" />
+        app:menu="@menu/bottom_navigation"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="564dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
