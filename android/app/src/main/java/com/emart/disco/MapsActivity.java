@@ -4,6 +4,7 @@ import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.FragmentActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
@@ -19,17 +20,14 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
-
-import model.Cart;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     SearchView map_searchView;
     Button confirm_location;
-    Cart cart;
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,9 +64,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     }
                     catch (IOException e) {
                         Toast.makeText(MapsActivity.this, "Location unavailable", Toast.LENGTH_LONG).show();
-                        Address address = addressList.get(0);
-                        address.clearLongitude();
-                        address.clearLatitude();
                         e.printStackTrace();
                     }
                 }
@@ -87,8 +82,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         confirm_location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String location = (String) map_searchView.getQuery();
-                cart.setLocation(location);
+                String location = map_searchView.getQuery().toString();
+                //shared preferences (Name, Mode)
+                sharedPreferences = getSharedPreferences("location", MODE_PRIVATE);
+                //edit shared preference (put data)
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                //put data in shared preference
+                editor.putString("location", location);
+                //apply changes to shared preference
+                editor.apply();
+
                 startActivity(new Intent(MapsActivity.this, disco_cart.class));
             }
         });

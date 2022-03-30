@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Product_catalog">
 
     <TextView
         android:id="@+id/simple_text"
@@ -48,7 +48,7 @@
                     android:layout_marginStart="1dp"
                     android:layout_marginTop="2dp"
                     android:layout_marginEnd="0dp"
-                     />
+                    android:src="@drawable/tomato" />
 
                 <TextView
                     android:id="@+id/text_tomato"
@@ -104,7 +104,7 @@
                     android:layout_height="128dp"
                     android:layout_alignParentStart="true"
                     android:layout_marginStart="-1dp"
-                     />
+                    android:src="@drawable/chicken_wing" />
 
                 <TextView
                     android:id="@+id/text_chicken"
@@ -168,7 +168,7 @@
                     android:id="@+id/img_bellpepper"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                     />
+                    android:src="@drawable/bell_pepper" />
 
                 <TextView
                     android:id="@+id/text_bellpepper"
@@ -224,7 +224,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginTop="21dp"
                     android:layout_marginEnd="0dp"
-                     />
+                    android:src="@drawable/lady_finger" />
 
                 <TextView
                     android:id="@+id/text_ladyfinger"

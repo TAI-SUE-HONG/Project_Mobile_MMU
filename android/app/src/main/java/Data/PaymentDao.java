@@ -17,7 +17,8 @@ public interface PaymentDao {
     @Query("SELECT * FROM Payment")
     List<Payment> loadAllDetails();
 
-    @Query("SELECT SUM(Price) Name FROM Cart")
+//    @Query("SELECT SUM(Price) Name FROM Cart")
+//    double
 
     @Insert
     void insert(Payment Payment);
