@@ -5,135 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/Title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Title"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/guideline23"
-        app:layout_constraintStart_toStartOf="@id/guideline24" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/payment_recycleview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guideline23">
 
     </androidx.recyclerview.widget.RecyclerView>
-
-    <TextView
-        android:id="@+id/Date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Date"
-        app:layout_constraintBottom_toTopOf="@+id/Name"
-        app:layout_constraintStart_toStartOf="@id/guideline24"
-        app:layout_constraintTop_toBottomOf="@+id/payment_recycleview" />
-
-    <TextView
-        android:id="@+id/Name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/Location"
-        app:layout_constraintStart_toStartOf="@id/guideline24"
-        app:layout_constraintTop_toBottomOf="@+id/Date" />
-
-    <TextView
-        android:id="@+id/Location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Location"
-        app:layout_constraintBottom_toTopOf="@+id/Gross_payment"
-        app:layout_constraintStart_toStartOf="@id/guideline24"
-        app:layout_constraintTop_toBottomOf="@+id/Name" />
-
-    <TextView
-        android:id="@+id/Gross_payment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gross_payment"
-        app:layout_constraintBottom_toTopOf="@+id/Delivery"
-        app:layout_constraintStart_toStartOf="@id/guideline24"
-        app:layout_constraintTop_toBottomOf="@+id/Location" />
-
-    <TextView
-        android:id="@+id/Delivery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Delivery"
-        app:layout_constraintBottom_toTopOf="@+id/Final_payment"
-        app:layout_constraintStart_toStartOf="@id/guideline24"
-        app:layout_constraintTop_toBottomOf="@+id/Gross_payment" />
-
-    <TextView
-        android:id="@+id/Final_payment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Final_payment"
-        app:layout_constraintBottom_toTopOf="@+id/btn_payment"
-        app:layout_constraintStart_toStartOf="@id/guideline24"
-        app:layout_constraintTop_toBottomOf="@+id/Delivery" />
-
-    <TextView
-        android:id="@+id/value_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="value_date"
-        app:layout_constraintBottom_toTopOf="@+id/value_name"
-        app:layout_constraintEnd_toEndOf="@id/guideline25"
-        app:layout_constraintTop_toBottomOf="@+id/payment_recycleview" />
-
-    <TextView
-        android:id="@+id/value_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="value_name"
-        app:layout_constraintBottom_toTopOf="@+id/value_location"
-        app:layout_constraintEnd_toEndOf="@id/guideline25"
-        app:layout_constraintTop_toBottomOf="@+id/value_date" />
-
-    <TextView
-        android:id="@+id/value_location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="value_location"
-        app:layout_constraintBottom_toTopOf="@+id/value_gross_payment"
-        app:layout_constraintEnd_toEndOf="@id/guideline25"
-        app:layout_constraintTop_toBottomOf="@+id/value_name" />
-
-    <TextView
-        android:id="@+id/value_gross_payment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="value_gross_payment"
-        app:layout_constraintBottom_toTopOf="@+id/value_delivery"
-        app:layout_constraintEnd_toEndOf="@id/guideline25"
-        app:layout_constraintTop_toBottomOf="@+id/value_location" />
-
-    <TextView
-        android:id="@+id/value_delivery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="value_delivery"
-        app:layout_constraintBottom_toTopOf="@+id/value_final_payment"
-        app:layout_constraintEnd_toEndOf="@id/guideline25"
-        app:layout_constraintTop_toBottomOf="@+id/value_gross_payment" />
-
-    <TextView
-        android:id="@+id/value_final_payment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="value_final_payment"
-        app:layout_constraintBottom_toTopOf="@+id/btn_payment"
-        app:layout_constraintEnd_toEndOf="@id/guideline25"
-        app:layout_constraintTop_toBottomOf="@+id/value_delivery" />
 
     <Button
         android:id="@+id/btn_payment"
@@ -141,21 +22,31 @@
         android:layout_height="wrap_content"
         android:text="@string/pay"
         app:layout_constraintBottom_toTopOf="@+id/bot_navigation"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bot_navigation"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_navigation">
+        app:menu="@menu/bottom_navigation" />
 
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/guideline23"
+        app:layout_constraintStart_toStartOf="@id/guideline24" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline23"
@@ -171,11 +62,33 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.03" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline25"
+    <TextView
+        android:id="@+id/Date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.97" />
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/payment_recycleview" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Date" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/btn_payment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
