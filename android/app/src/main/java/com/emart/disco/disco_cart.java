@@ -17,6 +17,7 @@ import android.widget.Button;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 
@@ -64,20 +65,21 @@ public class disco_cart extends AppCompatActivity {
         btn_order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                String name = dataBase.getCartDao().getName();
-//                double gross = dataBase.getCartDao().getGrossPayment();
-//                Calendar calendar = Calendar.getInstance();
-//                String currentDate = DateFormat.getDateInstance().format(calendar.getTime());
-//                //shared preferences (Name, Mode)
-//                sharedPreferences = getSharedPreferences("location", MODE_PRIVATE);
-//                //get data from shared preference
-//                String location = sharedPreferences.getString("location", "");
-//
-//                paymentDao = dataBase.getPaymentDao();
-//                Log.d("TAG", name + "\n" + gross + location);
-//                Payment payment = new Payment(currentDate, name, location, gross);
-//                paymentDao.insert(payment);
-                //startActivity(new Intent(disco_cart.this,Payment_details.class));
+                String name = dataBase.getCartDao().getName();
+                double gross = dataBase.getCartDao().getGrossPayment();
+                Calendar calendar = Calendar.getInstance();
+                SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy.HH:mm:ss");
+                String currentDate = format.format(calendar.getTime());
+                //shared preferences (Name, Mode)
+                sharedPreferences = getSharedPreferences("location", MODE_PRIVATE);
+                //get data from shared preference
+                String location = sharedPreferences.getString("location", "");
+
+                paymentDao = dataBase.getPaymentDao();
+                Log.d("TAG", currentDate + "\n" + name + "\n" + gross + "\n" + location);
+                Payment payment = new Payment(currentDate, name, location, gross);
+                paymentDao.insert(payment);
+                startActivity(new Intent(disco_cart.this,Payment_details.class));
             }
         });
 
