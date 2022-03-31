@@ -1,9 +1,7 @@
 package Data;
-import androidx.room.ColumnInfo;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
-import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
@@ -19,6 +17,9 @@ public interface CartDao {
     @Query("SELECT * FROM Cart")
     List<Cart> loadAllProduct();
 
+    @Query("SELECT userName FROM User")
+    String getName();
+
     @Insert
     void insert(Cart cart);
 
@@ -27,5 +28,8 @@ public interface CartDao {
 
     @Delete
     void delete(Cart cart);
+
+    @Query("SELECT SUM(Price*Quantity) FROM Cart ")
+    double getGrossPayment();
 }
 

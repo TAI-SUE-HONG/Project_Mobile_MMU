@@ -6,19 +6,22 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
-import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import java.util.ArrayList;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
-import Data.CartDao;
+import Data.PaymentDao;
 import Data.UserDataBase;
 import model.Cart;
 import model.Payment;
@@ -28,8 +31,8 @@ public class disco_cart extends AppCompatActivity {
     Button btn_location, btn_order;
     UserDataBase dataBase;
     RecyclerView recycle_cart_view;
-    Cart cart;
-    Payment payment;
+    PaymentDao paymentDao;
+    SharedPreferences sharedPreferences;
 
     @Override
 
@@ -62,7 +65,20 @@ public class disco_cart extends AppCompatActivity {
         btn_order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String name = dataBase.getCartDao().getName();
+                double gross = dataBase.getCartDao().getGrossPayment();
+                Calendar calendar = Calendar.getInstance();
+                SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy.HH:mm:ss");
+                String currentDate = format.format(calendar.getTime());
+                //shared preferences (Name, Mode)
+                sharedPreferences = getSharedPreferences("location", MODE_PRIVATE);
+                //get data from shared preference
+                String location = sharedPreferences.getString("location", "");
 
+                paymentDao = dataBase.getPaymentDao();
+                Log.d("TAG", currentDate + "\n" + name + "\n" + gross + "\n" + location);
+                Payment payment = new Payment(currentDate, name, location, gross);
+                paymentDao.insert(payment);
                 startActivity(new Intent(disco_cart.this,Payment_details.class));
             }
         });

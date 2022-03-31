@@ -44,7 +44,7 @@ public class Cart implements Serializable{
         Name = name;
     }
 
-    public void setLocation(@NonNull String location) {
+    public void setLocation(String location) {
         Location = location;
     }
 }
