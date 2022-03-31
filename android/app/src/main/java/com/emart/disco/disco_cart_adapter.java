@@ -54,7 +54,7 @@ public class disco_cart_adapter extends RecyclerView.Adapter<disco_cart_adapter.
     public class Viewholder extends RecyclerView.ViewHolder {
         //grabbing layout from order_history_adapter
 
-        Button Add, Minus;
+        Button Add, Minus, Delete;
         TextView Value, Product, Price;
 
         public Viewholder(@NonNull View itemView) {
@@ -65,6 +65,9 @@ public class disco_cart_adapter extends RecyclerView.Adapter<disco_cart_adapter.
             Value = itemView.findViewById(R.id.itemCount);
             Product = itemView.findViewById(R.id.txt_product_name);
             Price = itemView.findViewById(R.id.txt_price);
+            Delete=itemView.findViewById(R.id.delete_btn);
+       
+
             Add.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View view) {
@@ -81,5 +84,15 @@ public class disco_cart_adapter extends RecyclerView.Adapter<disco_cart_adapter.
                     Value.setText(Integer.toString(newValue));
                 }
             });
+
+
+
+
+
+
+
+
+
+
     }
 }}

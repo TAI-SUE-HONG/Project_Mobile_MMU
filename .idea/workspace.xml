@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -19,7 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da63c42e-5feb-4970-a57e-6dad9f6e72ba" name="Default Changelist" comment="" />
+    <list default="true" id="da63c42e-5feb-4970-a57e-6dad9f6e72ba" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/mobile app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mobile app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,9 +43,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AndroidStudioProjects" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -63,15 +70,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="-1180" y="271" key="FileChooserDialogImpl" timestamp="1646836871945">
-      <screen x="-1920" y="0" width="1920" height="1020" />
-    </state>
-    <state x="-1180" y="271" key="FileChooserDialogImpl/-1920.0.1920.1020/0.0.1536.816@-1920.0.1920.1020" timestamp="1646836871945" />
-    <state width="498" height="398" key="SwitcherDM" timestamp="1646836574584">
-      <screen x="-1920" y="0" width="1920" height="1020" />
-    </state>
-    <state width="498" height="398" key="SwitcherDM/-1920.0.1920.1020/0.0.1536.816@-1920.0.1920.1020" timestamp="1646836574584" />
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
