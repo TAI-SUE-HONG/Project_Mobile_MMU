@@ -8,7 +8,12 @@ import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -24,15 +29,14 @@ public class Payment_details extends AppCompatActivity {
 
     RecyclerView payment_recycleview;
     UserDataBase dataBase;
-    PaymentDao paymentDao;
+
+    TextView v_Date, v_Name, v_Location, v_Gross_payment, v_Delivery, v_Final_payment;
+    Button Pay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_details);
-
-        paymentDao = Room.databaseBuilder(this, UserDataBase.class, "mi-database.db").allowMainThreadQueries().build().getPaymentDao();
-
 
         payment_recycleview = findViewById(R.id.payment_recycleview);
         payment_recycleview.setLayoutManager(new LinearLayoutManager(this));
@@ -43,9 +47,39 @@ public class Payment_details extends AppCompatActivity {
                 .allowMainThreadQueries()
                 .build();
 
-        List<Payment> Payment = dataBase.getPaymentDao().loadAllDetails();
-        adapter.setPaymentDetail(Payment);
+        List<Cart> Cart = dataBase.getCartDao().loadAllProduct();
+        adapter.setPaymentDetail(Cart);
         adapter.notifyDataSetChanged();
+
+//        for (int i=0; i< Cart.size(); i++) {
+//            Log.d("TAG", Integer.toString(Cart.get(i).getQuantity()) + "\n" + Cart.get(i).getName() + "\n" + Cart.get(i).getPrice());
+//        }
+
+        v_Date = findViewById(R.id.value_date);
+        v_Name = findViewById(R.id.value_name);
+        v_Location = findViewById(R.id.value_location);
+        v_Gross_payment = findViewById(R.id.value_gross_payment);
+        v_Delivery = findViewById(R.id.value_delivery);
+        v_Final_payment = findViewById(R.id.value_final_payment);
+
+        List<Payment> Payment = dataBase.getPaymentDao().loadAllDetails();
+        v_Date.setText(Payment.get(Payment.size()-1).getDate());
+        v_Name.setText(Payment.get(Payment.size()-1).getName());
+        v_Location.setText(Payment.get(Payment.size()-1).getLocation());
+        v_Gross_payment.setText("RM " + String.format("%.2f", Payment.get(Payment.size()-1).getGross_payment()));
+        v_Delivery.setText("RM 3.00");
+        v_Final_payment.setText("RM" + String.format("%.2f", Payment.get(Payment.size()-1).getFinal_price()));
+
+        Pay = findViewById(R.id.btn_payment);
+        Pay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String date = v_Date.getText().toString();
+                dataBase.getCartDao().delete();
+                Toast.makeText(getApplicationContext(), "Thank you for your purchase!", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(Payment_details.this, Homepage.class));
+            }
+        });
 
         //Initialise and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bot_navigation);
@@ -64,10 +98,6 @@ public class Payment_details extends AppCompatActivity {
                         return true;
                     case R.id.nav_my_cart:
                         startActivity(new Intent(getApplicationContext(), disco_cart.class));
-                        overridePendingTransition(0,0);
-                        return true;
-                    case R.id.nav_order:
-                        startActivity(new Intent(getApplicationContext(), Order_history.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.nav_logout:

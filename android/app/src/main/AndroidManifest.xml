@@ -49,12 +49,6 @@
             android:name=".Payment_details"
             android:exported="false" />
         <activity
-            android:name=".Order_details"
-            android:exported="false" />
-        <activity
-            android:name=".Order_history"
-            android:exported="false" />
-        <activity
             android:name=".Login_activity"
             android:exported="true">
             <intent-filter>

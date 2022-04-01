@@ -32,6 +32,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Date"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/Name"
         app:layout_constraintStart_toStartOf="@id/guideline24"
         app:layout_constraintTop_toBottomOf="@+id/payment_recycleview" />
@@ -41,6 +43,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/Location"
         app:layout_constraintStart_toStartOf="@id/guideline24"
         app:layout_constraintTop_toBottomOf="@+id/Date" />
@@ -50,6 +54,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Location"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/Gross_payment"
         app:layout_constraintStart_toStartOf="@id/guideline24"
         app:layout_constraintTop_toBottomOf="@+id/Name" />
@@ -59,6 +65,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Gross_payment"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/Delivery"
         app:layout_constraintStart_toStartOf="@id/guideline24"
         app:layout_constraintTop_toBottomOf="@+id/Location" />
@@ -68,6 +76,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Delivery"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/Final_payment"
         app:layout_constraintStart_toStartOf="@id/guideline24"
         app:layout_constraintTop_toBottomOf="@+id/Gross_payment" />
@@ -77,6 +87,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Final_payment"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_payment"
         app:layout_constraintStart_toStartOf="@id/guideline24"
         app:layout_constraintTop_toBottomOf="@+id/Delivery" />
@@ -86,6 +98,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="value_date"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/value_name"
         app:layout_constraintEnd_toEndOf="@id/guideline25"
         app:layout_constraintTop_toBottomOf="@+id/payment_recycleview" />
@@ -95,6 +109,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="value_name"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/value_location"
         app:layout_constraintEnd_toEndOf="@id/guideline25"
         app:layout_constraintTop_toBottomOf="@+id/value_date" />
@@ -104,6 +120,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="value_location"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/value_gross_payment"
         app:layout_constraintEnd_toEndOf="@id/guideline25"
         app:layout_constraintTop_toBottomOf="@+id/value_name" />
@@ -113,6 +131,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="value_gross_payment"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/value_delivery"
         app:layout_constraintEnd_toEndOf="@id/guideline25"
         app:layout_constraintTop_toBottomOf="@+id/value_location" />
@@ -122,6 +142,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="value_delivery"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/value_final_payment"
         app:layout_constraintEnd_toEndOf="@id/guideline25"
         app:layout_constraintTop_toBottomOf="@+id/value_gross_payment" />
@@ -131,6 +153,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="value_final_payment"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_payment"
         app:layout_constraintEnd_toEndOf="@id/guideline25"
         app:layout_constraintTop_toBottomOf="@+id/value_delivery" />

@@ -123,10 +123,6 @@ public class Product_catalog extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), disco_cart.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.nav_order:
-                        startActivity(new Intent(getApplicationContext(), Order_history.class));
-                        overridePendingTransition(0,0);
-                        return true;
                     case R.id.nav_logout:
                         startActivity(new Intent(getApplicationContext(), Login_activity.class));
                         overridePendingTransition(0,0);

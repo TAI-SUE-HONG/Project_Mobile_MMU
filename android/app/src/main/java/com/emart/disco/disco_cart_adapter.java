@@ -9,9 +9,13 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
+import Data.CartDao;
+import Data.UserDataBase;
 import model.Cart;
 
 public class disco_cart_adapter extends RecyclerView.Adapter<disco_cart_adapter.Viewholder> {
@@ -42,7 +46,7 @@ public class disco_cart_adapter extends RecyclerView.Adapter<disco_cart_adapter.
         //all based on the position of the recycleview
 
         holder.Product.setText(CartList.get(position).getName());
-        holder.Price.setText("RM " + CartList.get(position).getPrice());
+        holder.Price.setText("RM " + String.format("%.2f", CartList.get(position).getPrice()));
         holder.Value.setText(Integer.toString(CartList.get(position).getQuantity()));
     }
 

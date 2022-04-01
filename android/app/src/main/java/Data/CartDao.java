@@ -20,14 +20,14 @@ public interface CartDao {
     @Query("SELECT userName FROM User")
     String getName();
 
+    @Query("DELETE FROM Cart")
+    void delete();
+
     @Insert
     void insert(Cart cart);
 
     @Update
     void update(Cart cart);
-
-    @Delete
-    void delete(Cart cart);
 
     @Query("SELECT SUM(Price*Quantity) FROM Cart ")
     double getGrossPayment();
