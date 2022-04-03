@@ -10,8 +10,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Qty"
-        android:textColor="@color/purple_200"
+        android:textColor="#fff"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/guideline21"
         app:layout_constraintTop_toTopOf="@id/guideline20" />
 
@@ -21,8 +22,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:text="Title"
-        android:textColor="@color/purple_200"
+        android:textColor="#fff"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/tv_payment_detail_quantity2"
         app:layout_constraintTop_toTopOf="@id/guideline20" />
 
@@ -32,8 +34,9 @@
         android:layout_height="wrap_content"
         android:text="Value"
         android:textAlignment="viewEnd"
-        android:textColor="@color/purple_200"
+        android:textColor="#fff"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/guideline22"
         app:layout_constraintTop_toTopOf="@id/guideline20" />
 

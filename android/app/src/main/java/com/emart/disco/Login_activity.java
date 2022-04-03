@@ -63,7 +63,7 @@ public class Login_activity extends AppCompatActivity {
                 }else{
                     Toast.makeText(Login_activity.this, "Unregistered user, or incorrect", Toast.LENGTH_SHORT).show();
                 }
-                startActivity(new Intent(Login_activity.this, Homepage.class));
+//                startActivity(new Intent(Login_activity.this, Homepage.class));
             }
         });
     }
