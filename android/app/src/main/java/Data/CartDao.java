@@ -23,6 +23,13 @@ public interface CartDao {
     @Query("DELETE FROM Cart")
     void delete();
 
+
+    @Query("DELETE FROM Cart WHERE Name = :name")
+    void deleteCart(String name);
+
+    @Query("UPDATE Cart SET Quantity=:Quantity WHERE Name= :name " )
+    void update(String name, int Quantity);
+
     @Insert
     void insert(Cart cart);
 

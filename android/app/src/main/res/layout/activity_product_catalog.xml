@@ -3,15 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg"
     tools:context=".Product_catalog">
 
     <TextView
         android:id="@+id/simple_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="81dp"
+        android:layout_width="249dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="144dp"
         android:text="Products"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,41 +38,38 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@drawable/bg">
 
                 <ImageView
-                    android:id="@+id/img_tomato"
-                    android:layout_width="205dp"
-                    android:layout_height="128dp"
-                    android:layout_alignParentTop="true"
+                    android:id="@+id/imgtomato"
+                    android:layout_width="match_parent"
+                    android:layout_height="129dp"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginStart="1dp"
-                    android:layout_marginTop="2dp"
                     android:layout_marginEnd="0dp"
-                    android:src="@drawable/tomato" />
+                    android:src="@drawable/tomato" /><![CDATA[
 
-                <TextView
-                    android:id="@+id/text_tomato"
-                    android:layout_width="142dp"
-                    android:layout_height="24dp"
-                    android:layout_below="@+id/img_tomato"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="7dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="59dp"
-                    android:text="Tomato (4 in 1 pack)" />
+                =======
+
+
+                >>>>>>> 657ffe300ea0d82253043c316b5b2610c63d5b2e
+
+
+
+
+
+                ]]>
 
                 <TextView
                     android:id="@+id/price_tomato"
                     android:layout_width="96dp"
                     android:layout_height="23dp"
-                    android:layout_below="@+id/text_tomato"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginEnd="92dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="87dp"
+                    android:layout_marginBottom="103dp"
                     android:text="RM 6.00" />
 
                 <Button
@@ -85,7 +83,18 @@
                     android:layout_marginTop="121dp"
                     android:layout_marginEnd="28dp"
                     android:layout_marginBottom="40dp"
+                    android:background="#D1C3EA"
                     android:text="Add to Cart" />
+
+                <TextView
+                    android:id="@+id/text_tomato"
+                    android:layout_width="142dp"
+                    android:layout_height="24dp"
+                    android:layout_below="@+id/imgtomato"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="2dp"
+                    android:text="Tomato (4 in 1 pack)" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -96,38 +105,52 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="287dp">
+                android:layout_height="287dp"
+                android:background="@drawable/bg"><![CDATA[
+
+                =======
+                android:layout_height="128dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="-1dp"
+                >>>>>>> 657ffe300ea0d82253043c316b5b2610c63d5b2e
+                android:src="@drawable/chicken_wing" />
+
+                ]]>
 
                 <ImageView
-                    android:id="@+id/img_chicken"
+                    android:id="@+id/imageView2"
                     android:layout_width="match_parent"
-                    android:layout_height="128dp"
+                    android:layout_height="132dp"
                     android:layout_alignParentStart="true"
-                    android:layout_marginStart="-1dp"
-                    android:src="@drawable/chicken_wing" />
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    app:srcCompat="@drawable/spinach" />
 
                 <TextView
-                    android:id="@+id/text_chicken"
+                    android:id="@+id/text_spinach"
                     android:layout_width="161dp"
                     android:layout_height="29dp"
-                    android:layout_below="@+id/img_chicken"
+                    android:layout_below="@+id/imageView2"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginEnd="45dp"
-                    android:text="Chicken Wing +/- 200g" />
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginEnd="46dp"
+                    android:text="Spinach" />
 
                 <TextView
-                    android:id="@+id/price_chicken"
+                    android:id="@+id/price_spinach"
                     android:layout_width="78dp"
                     android:layout_height="30dp"
-                    android:layout_below="@+id/text_chicken"
+                    android:layout_below="@+id/text_spinach"
                     android:layout_alignParentEnd="true"
                     android:layout_marginTop="0dp"
                     android:layout_marginEnd="127dp"
-                    android:text="RM 10.00" />
+                    android:text="RM 6.00" />
 
                 <Button
-                    android:id="@+id/add_button_chicken"
+                    android:id="@+id/add_button_spinach"
                     android:layout_width="134dp"
                     android:layout_height="35dp"
                     android:layout_alignParentStart="true"
@@ -136,6 +159,7 @@
                     android:layout_marginStart="43dp"
                     android:layout_marginEnd="18dp"
                     android:layout_marginBottom="49dp"
+                    android:background="#D1C3EA"
                     android:text="Add to Cart" />
             </RelativeLayout>
 
@@ -162,22 +186,38 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@drawable/bg"><![CDATA[
+
+                =======
+                    android:layout_height="150dp"
+>>>>>>> 657ffe300ea0d82253043c316b5b2610c63d5b2e
+                    android:src="@drawable/bell_pepper" />
+
+
+
+                ]]>
 
                 <ImageView
                     android:id="@+id/img_bellpepper"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:src="@drawable/bell_pepper" />
+                    android:layout_height="129dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="0dp"
+                    app:srcCompat="@drawable/bell_pepper" />
 
                 <TextView
                     android:id="@+id/text_bellpepper"
                     android:layout_width="169dp"
                     android:layout_height="32dp"
                     android:layout_below="@+id/img_bellpepper"
+                    android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="34dp"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="29dp"
                     android:text="Bell Pepper (4 in 1 pack)"
                     android:textSize="14sp" />
 
@@ -188,9 +228,9 @@
                     android:layout_below="@+id/text_bellpepper"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="100dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="-3dp"
+                    android:layout_marginEnd="90dp"
                     android:text="RM 6.00" />
 
                 <Button
@@ -203,6 +243,7 @@
                     android:layout_marginStart="46dp"
                     android:layout_marginEnd="27dp"
                     android:layout_marginBottom="27dp"
+                    android:background="#D1C3EA"
                     android:text="Add to Cart" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -214,28 +255,36 @@
 
             <RelativeLayout
                 android:layout_width="208dp"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@drawable/bg">
+
+                =======
+                android:layout_height="128dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="0dp"
+                >>>>>>> 657ffe300ea0d82253043c316b5b2610c63d5b2e
+                android:src="@drawable/lady_finger" />
 
                 <ImageView
-                    android:id="@+id/img_tladyfinger"
-                    android:layout_width="match_parent"
-                    android:layout_height="128dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="21dp"
-                    android:layout_marginEnd="0dp"
-                    android:src="@drawable/lady_finger" />
+                    android:id="@+id/imageView4"
+                    android:layout_width="205dp"
+                    android:layout_height="129dp"
+                    app:srcCompat="@drawable/lady_finger" />
 
                 <TextView
                     android:id="@+id/text_ladyfinger"
                     android:layout_width="168dp"
                     android:layout_height="34dp"
                     android:layout_above="@+id/add_button_ladyfinger"
+                    android:layout_below="@+id/imageView4"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginStart="9dp"
-                    android:layout_marginEnd="31dp"
-                    android:layout_marginBottom="29dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginBottom="72dp"
                     android:text="Lady Finger "
                     android:textSize="14sp" />
 
@@ -246,10 +295,9 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginEnd="145dp"
-                    android:layout_marginBottom="72dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="151dp"
+                    android:layout_marginBottom="117dp"
                     android:text="RM5.00" />
 
                 <Button
@@ -262,6 +310,7 @@
                     android:layout_marginStart="46dp"
                     android:layout_marginEnd="27dp"
                     android:layout_marginBottom="27dp"
+                    android:background="#D1C3EA"
                     android:text="Add to Cart" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -269,8 +318,8 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bot_navigation"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="406dp"
+        android:layout_height="49dp"
         android:background="@color/white"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"

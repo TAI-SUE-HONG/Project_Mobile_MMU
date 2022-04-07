@@ -30,7 +30,7 @@ public class Product_catalog extends AppCompatActivity {
         setContentView(R.layout.activity_product_catalog);
 
         btn1=findViewById(R.id.add_button_tomato);
-        btn2=findViewById(R.id.add_button_chicken);
+        btn2=findViewById(R.id.add_button_spinach);
         btn3=findViewById(R.id.add_button_bellpepper);
         btn4=findViewById(R.id.add_button_ladyfinger);
 

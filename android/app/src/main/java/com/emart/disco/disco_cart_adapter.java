@@ -20,6 +20,8 @@ import model.Cart;
 
 public class disco_cart_adapter extends RecyclerView.Adapter<disco_cart_adapter.Viewholder> {
     Context context;
+    UserDataBase dataBase;
+    CartDao cartDao;
     List<Cart> CartList;
 
     public disco_cart_adapter(Context context) {
@@ -44,10 +46,42 @@ public class disco_cart_adapter extends RecyclerView.Adapter<disco_cart_adapter.
     public void onBindViewHolder(Viewholder holder, int position) {
         //assigning values to view created in the recycleview layout file
         //all based on the position of the recycleview
+        dataBase = Room.databaseBuilder(context, UserDataBase.class, "mi-database.db")
+                .allowMainThreadQueries()
+                .build();
 
         holder.Product.setText(CartList.get(position).getName());
         holder.Price.setText("RM " + String.format("%.2f", CartList.get(position).getPrice()));
         holder.Value.setText(Integer.toString(CartList.get(position).getQuantity()));
+        holder.Delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                dataBase.getCartDao().deleteCart(CartList.get(position).getName());
+                CartList.remove(position);
+
+                notifyDataSetChanged();
+            }
+        });
+        holder.Add.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                int newValue = 1 + Integer.parseInt(holder.Value.getText().toString());
+                holder.Value.setText(Integer.toString(newValue));
+                dataBase.getCartDao().update(CartList.get(position).getName(),newValue);
+
+            }
+        });
+
+        holder.Minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int newValue = Integer.parseInt(holder.Value.getText().toString())-1;
+                holder.Value.setText(Integer.toString(newValue));
+                dataBase.getCartDao().update(CartList.get(position).getName(),newValue);
+            }
+        });
+
     }
 
     @Override //the number of items in cart
@@ -72,22 +106,22 @@ public class disco_cart_adapter extends RecyclerView.Adapter<disco_cart_adapter.
             Delete=itemView.findViewById(R.id.delete_btn);
        
 
-            Add.setOnClickListener(new View.OnClickListener(){
-                @Override
-                public void onClick(View view) {
-                    int newValue = 1 + Integer.parseInt(Value.getText().toString());
-                    Value.setText(Integer.toString(newValue));
-
-                }
-             });
-
-            Minus.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    int newValue = Integer.parseInt(Value.getText().toString())-1;
-                    Value.setText(Integer.toString(newValue));
-                }
-            });
+//            Add.setOnClickListener(new View.OnClickListener(){
+//                @Override
+//                public void onClick(View view) {
+//                    int newValue = 1 + Integer.parseInt(Value.getText().toString());
+//                    Value.setText(Integer.toString(newValue));
+//
+//                }
+//             });
+//
+//            Minus.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    int newValue = Integer.parseInt(Value.getText().toString())-1;
+//                    Value.setText(Integer.toString(newValue));
+//                }
+//            });
 
 
 
